@@ -321,6 +321,7 @@ class Geometria:
         C = x2 * y1 - x1 * y2
         return (A, B, C)
     
+    
     def area_poligono_regular(self, num_lados, lado, apotema):
         """
         Calcula el área de un polígono regular.

@@ -40,8 +40,8 @@ class Geometria:
         Returns:
             float: Área del círculo
         """
-        pass
-    
+        pi = 3.1416
+        return pi * radio * radio    
     def perimetro_circulo(self, radio):
         """
         Calcula el perímetro (circunferencia) de un círculo.

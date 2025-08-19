@@ -85,6 +85,7 @@ class Games:
         if hay_espacios:
             return "continua"
         
+        
         return "empate"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):

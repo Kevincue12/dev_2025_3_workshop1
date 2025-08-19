@@ -225,6 +225,8 @@ class Strings:
         posiciones = []
         n = len(texto)
         m = len(subcadena)
+        if m == 0 or m > n:
+            return [] 
         for i in range(n - m + 1):
             match = True
             for j in range(m):

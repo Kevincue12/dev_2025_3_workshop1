@@ -316,9 +316,9 @@ class Geometria:
         Returns:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
-        A = y2 - y1
-        B = x1 - x2
-        C = x2 * y1 - x1 * y2
+        A = y1 - y2
+        B = x2 - x1
+        C = x1*y2 - x2*y1
         return (A, B, C)
     
     

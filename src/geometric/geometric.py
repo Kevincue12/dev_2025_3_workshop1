@@ -113,6 +113,7 @@ class Geometria:
             float: Área del trapecio
         """
         return (base_mayor + base_menor) * altura / 2    
+    
     def area_rombo(self, diagonal_mayor, diagonal_menor):
         """
         Calcula el área de un rombo usando sus diagonales.
@@ -124,8 +125,8 @@ class Geometria:
         Returns:
             float: Área del rombo
         """
-        pass
-    
+        return (diagonal_mayor * diagonal_menor) / 2
+        
     def area_pentagono_regular(self, lado, apotema):
         """
         Calcula el área de un pentágono regular.

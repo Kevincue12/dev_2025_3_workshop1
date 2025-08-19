@@ -70,22 +70,23 @@ class Games:
              ["O", "O", " "],
              [" ", " ", " "]] -> "X"
         """
+        hay_espacios = any(" " in fila for fila in tablero)
+        
         for i in range(3):
             if tablero[i][0] == tablero[i][1] == tablero[i][2] != " ":
-                return tablero[i][0]
+                return "continua" if hay_espacios else tablero[i][0]
             if tablero[0][i] == tablero[1][i] == tablero[2][i] != " ":
-                return tablero[0][i]
+                return "continua" if hay_espacios else tablero[0][i]
         
         if tablero[0][0] == tablero[1][1] == tablero[2][2] != " ":
-            return tablero[0][0]
+            return "continua" if hay_espacios else tablero[0][0]
         if tablero[0][2] == tablero[1][1] == tablero[2][0] != " ":
-            return tablero[0][2]
+            return "continua" if hay_espacios else tablero[0][2]
         
-        # Verificar si hay espacios vacíos
-        hay_espacios = any(" " in fila for fila in tablero)
         if hay_espacios:
             return "continua"
         
+ 
         return "empate"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):

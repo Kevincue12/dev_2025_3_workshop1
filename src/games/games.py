@@ -70,21 +70,23 @@ class Games:
              ["O", "O", " "],
              [" ", " ", " "]] -> "X"
         """
-        for i in range(3):
-            if tablero[i][0] == tablero[i][1] == tablero[i][2] != " ":
-                return tablero[i][0]
-            if tablero[0][i] == tablero[1][i] == tablero[2][i] != " ":
-                return tablero[0][i]
+        for fila in tablero:
+            if fila[0] == fila[1] == fila[2] != " ":
+                return fila[0]
+        
+        for col in range(3):
+            if tablero[0][col] == tablero[1][col] == tablero[2][col] != " ":
+                return tablero[0][col]
         
         if tablero[0][0] == tablero[1][1] == tablero[2][2] != " ":
             return tablero[0][0]
         if tablero[0][2] == tablero[1][1] == tablero[2][0] != " ":
             return tablero[0][2]
         
-        hay_espacios = any(" " in fila for fila in tablero)
-        if hay_espacios:
-            return "continua"
-        
+        for fila in tablero:
+            for celda in fila:
+                if celda == " ":
+                    return "continua"
         
         return "empate"
     

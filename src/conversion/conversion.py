@@ -241,5 +241,4 @@ class Conversion:
         for simbolo in palabras:
             if simbolo in morse_dict:
                 resultado.append(morse_dict[simbolo])
-            # Ignora símbolos que no estén en el diccionario
         return "".join(resultado)

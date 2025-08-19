@@ -320,7 +320,7 @@ class Geometria:
         B = x1 - x2
         C = x2*y1 - x1*y2
 
-        if A == 0 and B < 0:  
+        if A == 0 and B > 0:  
             B = -B
             C = -C
         elif A < 0:  

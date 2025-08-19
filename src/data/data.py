@@ -134,7 +134,10 @@ class Data:
         Returns:
             dict: Diccionario con métodos push, pop, peek y is_empty
         """
-        pass
+        for elem in conjunto1:
+         if elem not in conjunto2:
+            return False
+        return True
     
     def implementar_cola(self):
         """

@@ -36,6 +36,7 @@ class Data:
                 return i
         return -1
     
+    
     def eliminar_duplicados(self, lista):
         """
         Elimina elementos duplicados de una lista sin usar set().
@@ -47,7 +48,13 @@ class Data:
         Returns:
             list: Lista sin elementos duplicados
         """
-        pass
+        resultado = []
+        vistos = {}
+        for elem in lista:
+            if elem not in vistos:
+                resultado.append(elem)
+                vistos[elem] = True
+        return resultado
     
     def merge_ordenado(self, lista1, lista2):
         """

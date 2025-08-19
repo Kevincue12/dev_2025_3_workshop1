@@ -32,7 +32,7 @@ class Stats:
             mediana([1, 2, 3, 4]) -> 2.5
         """
         if not numeros:
-            return None 
+            return 0
         
         numeros_ordenados = sorted(numeros)
         n = len(numeros_ordenados)

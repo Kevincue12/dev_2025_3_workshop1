@@ -50,7 +50,7 @@ class Data:
         """
         resultado = []
         for elem in lista:
-         if elem not in resultado:  # se asegura de no repetir
+         if not any((elem == x and type(elem) == type(x)) for x in resultado):
             resultado.append(elem)
         return resultado
     

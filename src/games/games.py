@@ -142,4 +142,7 @@ class Games:
                 if tablero[desde_fila][c] != " ":
                     return False
         
+        if tablero[hasta_fila][hasta_col] != " ":
+            return False
+        
         return True
